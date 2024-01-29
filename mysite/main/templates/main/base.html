@@ -2,28 +2,39 @@
 <html>
   <head>
     <style type="text/css">
+      body {
+        margin: 0;
+      }
+
       .sidenav {
-          height:100%;
-          width: 160px;
-          position: fixed;
-          z-index:1;
-          top:0;
-          left:0;
-          background-color:#483269;
-          overflow-x: :hidden;
-          padding-top:20px;
+        height: 100px; /* Set the height of the sidenav as needed */
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #483269;
+        overflow-x: hidden;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .sidenav a {
-          padding:6px 8px 6px 16px;
-          text-decoration: nonoe;
-          color: #fff;
-          display:block;
+        padding: 6px 8px;
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
       }
 
-      .main{
-          margin-left:160px;
-          padding: 0px 10px;
+      .main {
+        margin-top: 100px; /* Adjust the margin-top to account for the sidenav height */
+        padding: 0px 10px;
+      }
+
+      .logo {
+        margin-left: 20px; /* Adjust the margin as needed */
       }
     </style>
 
@@ -40,17 +51,26 @@
       crossorigin="anonymous"
     />
 
-    <title>NYEA</title>
+    <title>뉴욕영어학원</title>
   </head>
 
   <body>
     <div class="sidenav">
-      <a href="/home">Home</a>
-      <a href="/create">Create</a>
-      <a href="/view">View</a>
+      <div class="logo">
+        <img src="path to iamge" alt="Logo" width="50" height="50" />
+        <!-- Add your logo here -->
+      </div>
+      <div class="nav-links">
+        <a href="/home">Home</a>
+        <a href="/create">create</a>
+        <a href="/view">view</a>
+      </div>
+      <div class="login-btn">
+        <a href="/login" style="color: #fff; text-decoration: none">Login</a>
+      </div>
     </div>
 
-    <div id="content" , name="content" , class="main">
+    <div id="content" name="content" class="main">
       <div class="row justify-content-center">
         <div class="col-8">
           <h1 class="mt-2">My Site</h1>
